@@ -1,0 +1,192 @@
+/*****************************************/
+/* BELOW 1200 px (Landscape Tablets) */
+/*****************************************/
+@media (max-width: 75em) {
+    html {
+        /* 9px / 16px */
+        font-size: 56.25%;
+    }
+
+    .grid {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
+    }
+
+    .heading-secondary {
+        font-size: 3.6rem;
+    }
+    .subheading-secondary {
+        font-size: 1.4rem;
+    }
+}
+
+/*****************************************/
+/* BELOW 944 px (Tablets) */
+/*****************************************/
+@media (max-width: 59em) {
+    html {
+        /* 8px / 16px = .5 */
+        font-size: 50%;
+    }
+
+    .grid--4-cols {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .hero-container {
+        padding: 4.8rem 6.4rem;
+    }
+
+    .section-facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* MOBILE NAVIGATION */
+    .btn-mobile-nav {
+        display: block;
+    }
+    .nav-list {
+        background-color: rgba(255, 255, 255, 0.977);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99;
+        transform: translateX(100%);
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4.8rem;
+
+        transition: all 0.5s ease-in;
+
+        /* Hide navigation */
+        /* Allows NO transition at all */
+        /* display: none; */
+
+        /* 1) Hide it visually */
+        opacity: 0;
+
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;
+
+        /* 3) Hide it from screen readers */
+        visibility: hidden;
+    }
+
+    .nav-open .nav-list {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .nav-open .icon-mobile-nav[name='close-outline'] {
+        display: block;
+        position: relative;
+        z-index: 999;
+    }
+    .nav-open .icon-mobile-nav[name='menu-outline'] {
+        display: none;
+    }
+
+    .nav-list-link:link,
+    .nav-list-link:visited {
+        font-size: 3rem;
+    }
+}
+
+/*****************************************/
+/* BELOW 704 px (Smaller Tablets) */
+/*****************************************/
+@media (max-width: 44em) {
+    .grid--2-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .labelled-img-box {
+        height: 50rem;
+    }
+
+    .section-why .labelled-img-box {
+        grid-row: 1;
+    }
+
+    .services-cta-box {
+        justify-self: start;
+    }
+
+    .services,
+    .team-members {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*****************************************/
+/* BELOW 544px (Phones) */
+/*****************************************/
+@media (max-width: 34em) {
+    .grid {
+        row-gap: 4.8rem;
+    }
+
+    .grid--2-cols,
+    .grid--3-cols,
+    .grid--4-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .subheading-primary {
+        font-size: 2rem;
+    }
+    .heading-primary {
+        font-size: 5.2rem;
+    }
+    .section-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+    .appointment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-form {
+        grid-template-columns: 1fr;
+    }
+    .form-input--message {
+        grid-column: span 1;
+    }
+    .appointment-form-btn {
+        grid-column: span 1;
+    }
+
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding-bottom: 4.8rem;
+    }
+    .copyright {
+        gap: 2.4rem;
+        justify-content: center;
+    }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
