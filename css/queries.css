@@ -148,6 +148,14 @@
     .heading-primary {
         font-size: 5.2rem;
     }
+
+    .about-items {
+        flex-wrap: wrap;
+    }
+    .about-item-icon {
+        font-size: 2.4rem;
+    }
+
     .section-facts {
         grid-template-columns: 1fr;
     }
