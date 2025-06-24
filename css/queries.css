@@ -143,10 +143,18 @@
     }
 
     .subheading-primary {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .heading-primary {
-        font-size: 5.2rem;
+        font-size: 4.4rem;
+    }
+
+    .hero-container {
+        padding: 4.8rem 3.2rem;
+    }
+
+    .hero-service-list {
+        flex-wrap: wrap;
     }
 
     .about-items {
