@@ -684,3 +684,8 @@
 .copyright p span {
     color: #fda12b;
 }
+
+.copyright p a {
+    text-decoration: none;
+    color: #fda12b;
+}
